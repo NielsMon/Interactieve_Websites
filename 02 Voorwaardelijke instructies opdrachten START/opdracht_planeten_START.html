@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html lang="nl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
     <title>Les 2: Opdracht planeet</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-</head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
+      <h3>Hoeveel weeg ik op een andere planeet?</h3>
 
-        <h3>Hoeveel weeg ik op een andere planeet?</h3>
-
-        <div class="row">
-            <div class="col-md-12">
-                <img id="imgPlaneet" src="img/vraagteken.jpg">
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img id="imgPlaneet" src="img/vraagteken.jpg" />
         </div>
+      </div>
 
-        <div class="row mt-3">
-            <div class="col-md-12">
-                <div id="mijnGewicht"></div>
-            </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <div id="mijnGewicht"></div>
         </div>
+      </div>
     </div>
 
     <script>
-        // Schrijf jouw code hieronder.
-    </script>
+      let output;
+      let gewicht = parseInt(prompt("Geef je gewicht"));
+      let planeet = prompt(`Bereken mijn gewicht op:\n
+          A. Maan\n
+          B. Jupiter\n
+          C. Mars\n
+          D. Venus\n
+          E. Neptunus`);
 
+      switch (planeet.toLowerCase()) {
+        case "a":
+          output = `Je koos voor "Maan". Je weegt hier ${
+            gewicht * 0.166
+          }kg ipv ${gewicht}kg`;
+          document.getElementById("imgPlaneet").src = "img/maan.jpg";
+          break;
+        case "b":
+          output = `Je koos voor "Jupiter". Je weegt hier ${
+            gewicht * 2.36
+          }kg ipv ${gewicht}kg`;
+          document.getElementById("imgPlaneet").src = "img/jupiter.jpg";
+          break;
+        case "c":
+          output = `Je koos voor "Mars". Je weegt hier ${
+            gewicht * 0.39
+          }kg ipv ${gewicht}kg`;
+          document.getElementById("imgPlaneet").src = "img/mars.jpg";
+          break;
+        case "d":
+          output = `Je koos voor "Venus". Je weegt hier ${
+            gewicht * 0.9
+          }kg ipv ${gewicht}kg`;
+          document.getElementById("imgPlaneet").src = "img/venus.jpg";
+          break;
+        case "e":
+          output = `Je koos voor "Neptunus". Je weegt hier ${
+            gewicht * 1.12
+          }kg ipv ${gewicht}kg`;
+          document.getElementById("imgPlaneet").src = "img/neptunus.jpg";
+          break;
+        default:
+          output = "Verkeerde keuze!";
+          break;
+      }
+
+      document.getElementById("mijnGewicht").innerHTML = output;
+      alert(output);
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
-
-</body>
-
+  </body>
 </html>
