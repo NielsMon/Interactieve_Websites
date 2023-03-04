@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemiddelde</title>
+  </head>
+  <body>
+    <script>
+      let input;
+      let som = 0;
+      let teller = 0;
+      let n = parseInt(prompt("Geef een aantal in"));
+
+      do {
+        teller++;
+        input = parseInt(prompt("Geef een getal"));
+        som += input;
+
+        if (input < 50 && teller < n) {
+          alert("Oei, is het volgende beter?");
+        } else if (teller < n) {
+          alert("Doe zo voort!");
+        }
+      } while (teller < n);
+
+      alert(
+        `Genoeg geprobeerd, uw beurt is over!\nHet gemiddelde van de reeks is ${Math.round(
+          som / n
+        )}`
+      );
+    </script>
+  </body>
+</html>

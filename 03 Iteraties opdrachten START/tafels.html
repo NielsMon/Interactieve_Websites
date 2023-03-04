@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tafels</title>
+  </head>
+  <body>
+    <h4>Tafels met de lus while()</h4>
+    <p id="while"></p>
+    <br />
+    <h4>Tafels met de for-lus</h4>
+    <p id="for"></p>
+    <script>
+      let getal = 10;
+      let teller = 1;
+      let outputWhile = "";
+      let outputFor = "";
+
+      while (teller <= 10) {
+        outputWhile += `${teller} maal ${10} = ${teller * 10}\n`;
+        teller++;
+      }
+      document.getElementById("while").innerText = outputWhile;
+
+      for (let index = 1; index <= getal; index++) {
+        outputFor += `${index} maal ${10} = ${index * 10}\n`;
+      }
+      document.getElementById("for").innerText = outputFor;
+    </script>
+  </body>
+</html>
