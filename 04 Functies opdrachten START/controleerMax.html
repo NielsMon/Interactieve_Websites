@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>controleerMax</title>
+  </head>
+  <body>
+    <h2>Bepaal het grootste getal</h2>
+    <div id="resultaat"></div>
+    <script>
+      // opvragen getallen
+      let getal1 = parseInt(prompt("Geef getal 1"));
+      let getal2 = parseInt(prompt("Geef getal 2"));
+
+      // functie
+      let controleerMax = (getal1, getal2) => {
+        let output;
+        if (getal1 > getal2) {
+          output = getal1;
+        } else {
+          output = getal2;
+        }
+        return output;
+      };
+      // bewerkingen
+      let output = `Het grootste getal is ${controleerMax(getal1, getal2)}`;
+
+      // resultaat tonen
+      document.getElementById("resultaat").innerText = output;
+    </script>
+  </body>
+</html>

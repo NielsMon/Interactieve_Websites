@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>naamIngeven</title>
+  </head>
+  <body>
+    <form action="somepage.php" method="get">
+      <div>
+        <button type="button" name="knop" id="knop">Naam ingeven</button>
+        <br />
+        <input type="text" name="naam" id="naam" />
+      </div>
+
+      <script>
+        // variabelen
+        const tekstvak = document.getElementById("naam");
+        const knop = document.getElementById("knop");
+
+        // functie
+        function naamIngeven() {
+          tekstvak.value = prompt("Geef een naam");
+        }
+
+        // EventListener
+        knop.addEventListener("click", naamIngeven, false);
+      </script>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>berekenFunctie</title>
+  </head>
+  <body>
+    <h2>Bereken de som, het verschil en het product</h2>
+    <div id="resultaat"></div>
+    <script>
+      // opvragen getallen
+      let getal1 = parseInt(prompt("Geef getal 1"));
+      let getal2 = parseInt(prompt("Geef getal 2"));
+
+      // bewerkingen
+      let output = `De ingegeven getallen zijn ${getal1} en ${getal2}.\n
+      De som is: ${berekenSom(getal1, getal2)}
+      Het verschil is: ${berekenVerschil(getal1, getal2)}
+      Het product is: ${berekenProduct(getal1, getal2)}`;
+
+      // resultaat afdrukken
+      document.getElementById("resultaat").innerText = output;
+
+      // functies
+      function berekenSom(getal1, getal2) {
+        return getal1 + getal2;
+      }
+      function berekenVerschil(getal1, getal2) {
+        return getal1 - getal2;
+      }
+      function berekenProduct(getal1, getal2) {
+        return getal1 * getal2;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.row > div {
+  margin: 5px;
+}
+
+#magicWand {
+  width: 100%;
+}
+
+.form-label {
+  font-weight: 500;
+}
+#vet {
+  font-weight: bold;
+  font-size: larger;
+}
